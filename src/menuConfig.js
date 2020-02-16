@@ -1,23 +1,36 @@
 const menuList = [
     {
         title: '首页',
-        key:"/admin/home"
+        key:"/home"
     },
     {
         title:"UI",
-        key:"/admin/ui",
+        key:"/ui",
         children:[
             {
                 title:"按钮",
-                key:"/admin/ui/button"
+                key:"/ui/button"
             },
             {
                 title:"弹窗",
-                key:"/admin/ui/modals"
+                key:"/ui/modals"
             },
             {
                 title:"Loading",
-                key:"/admin/ui/modals"
+                key:"/ui/modals"
+            }
+        ]
+    },
+    {   title:"form表单",
+        key:"/form",
+        children:[
+            {
+                title:"登录",
+                key:"/form/login"
+            },
+            {
+                title:"注册",
+                key:"/form/register"
             }
         ]
     }

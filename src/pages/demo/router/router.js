@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Link } from 'react-router-dom'
+import { HashRouter, Route, Link, Switch } from 'react-router-dom'
 import Home from './Home'
 class Router extends Component {
     constructor(props) {
@@ -10,18 +10,22 @@ class Router extends Component {
         return (
             <HashRouter>
                 <Home>
-                    <Route exact={true} path="/" component={Main}></Route>
-                    <Route path="/about" component={About}></Route>
-                    <Route path="/topics" component={Topic}></Route>
-                    {/* 嵌套二级路由 */}
-                    <Route path="/user"
-                        render={
-                            () =>
-                                <User>
-                                    <Route path="/user/add" component={AddUser}></Route>
-                                </User>
-                        }
-                    ></Route>
+                    <Switch>
+                        <Route exact={true} path="/" component={Main}></Route>
+                        <Route path="/about" component={About}></Route>
+                        <Route path="/topics" component={Topic}></Route>
+                        {/* 嵌套二级路由 */}
+                        <Route path="/user"
+                            render={
+                                () =>
+                                    <User>
+                                        <Route path="/user/add/:id" component={AddUser}></Route>
+                                    </User>
+                            }
+                        ></Route>
+                        {/* 配置404页面 需要配和switch组件 匹配不上的就会显示404组件 */}
+                        <Route component={NotFond}></Route>
+                    </Switch>
                 </Home>
             </HashRouter>
         );
@@ -29,19 +33,30 @@ class Router extends Component {
 }
 // 一级
 const User = (props) => {
-    console.log(props.children, ' -----')
+
     return (
         <div>===我是user===
-            <Link to="/user/add">去子组件</Link>
+            <Link to="/user/add/456">去子组件</Link>
             <br />
+            {/* 出口 */}
             {props.children}
         </div>
     )
 }
-// 二级路由
-const AddUser = () => <div>======我是user的子组件 AddUser==========</div>
+// 二级路由 及获取动态路由参数
+// 在props.match.params 接收
+const AddUser = (props) => {
+    console.log(props.match)
+    return (
+        <div>======我是user的子组件 AddUser===动态参数{props.match.params.id}=======</div>
+    )
+}
 
-
+const NotFond = () => {
+    return (
+        <div>not found</div>
+    )
+}
 const Main = () => {
     return (
         <div>this is Main =========</div>
