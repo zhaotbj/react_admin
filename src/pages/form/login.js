@@ -72,7 +72,7 @@ class FormLogin extends React.Component {
                                     valuePropName: 'checked'
                                 })(<Checkbox>记住密码</Checkbox>)
                             }
-                            <a href="">忘记密码</a>
+                            <a href="##">忘记密码</a>
                         </FormItem>
                         <FormItem>
                             <Button type="primary" htmlType="submit">登录</Button>

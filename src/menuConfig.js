@@ -33,6 +33,16 @@ const menuList = [
                 key:"/form/register"
             }
         ]
+    },
+    {
+        title:"表格",
+        key:"/table",
+        children:[
+            {
+                title:"基础表格",
+                key:"/table/basic"
+            }
+        ]
     }
 ]
 export default menuList

@@ -1,0 +1,48 @@
+{
+    "code":0,
+    "list":[
+        {
+            "key": 0,
+            "name": "胡彦斌1",
+            "age": 32,
+            "sex":1,
+            "hobby":"1",
+            "address": "西湖区湖底公园1号"
+          },
+          {
+            "key": 1,
+            "name": "胡彦斌2",
+            "age": 32,
+            "sex":0,
+            "hobby":"3",
+            "address": "西湖区湖底公园1号"
+          },
+          {
+            "key": 2,
+            "name": "胡彦斌3",
+            "age": 32,
+            "sex":0,
+            "hobby":"3",
+            "address": "西湖区湖底公园1号"
+          },
+          {
+            "key": 3,
+            "name": "胡彦斌4",
+            "age": 32,
+            "sex":0,
+            "hobby":"3",
+            "address": "西湖区湖底公园1号"
+          },
+          {
+            "key": 4,
+            "name": "胡彦斌5",
+            "age": 32,
+            "sex":0,
+            "hobby":"3",
+            "address": "西湖区湖底公园1号"
+          }
+    ],
+    "current":1,
+    "pageSize":10,
+    "total":100
+}

@@ -8,6 +8,7 @@ import NoMatch from './pages/noMatch'
 import Modals from './pages/ui/modals'
 import FormLogin from './pages/form/login'
 import FormRegister from './pages/form/register'
+import BasicTable from './pages/table/basicTable'
 class IRouter extends Component {
     constructor(props) {
         super(props);
@@ -25,6 +26,7 @@ class IRouter extends Component {
                                 <Route path="/ui/modals" component={Modals}></Route>
                                 <Route path="/form/login" component={FormLogin}></Route>
                                 <Route path="/form/register" component={FormRegister}></Route>
+                                <Route path="/table/basic" component={BasicTable}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
