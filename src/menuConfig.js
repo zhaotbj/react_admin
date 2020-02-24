@@ -1,48 +1,56 @@
 const menuList = [
     {
         title: '首页',
-        key:"/home"
+        key:"/admin/home"
     },
     {
         title:"UI",
-        key:"/ui",
+        key:"/admin/ui",
         children:[
             {
                 title:"按钮",
-                key:"/ui/button"
+                key:"/admin/ui/button"
             },
             {
                 title:"弹窗",
-                key:"/ui/modals"
+                key:"/admin/ui/modals"
             },
             {
                 title:"Loading",
-                key:"/ui/modals"
+                key:"/admin/ui/modals"
             }
         ]
     },
     {   title:"form表单",
-        key:"/form",
+        key:"/admin/form",
         children:[
             {
                 title:"登录",
-                key:"/form/login"
+                key:"/admin/form/login"
             },
             {
                 title:"注册",
-                key:"/form/register"
+                key:"/admin/form/register"
             }
         ]
     },
     {
         title:"表格",
-        key:"/table",
+        key:"/admin/table",
         children:[
             {
                 title:"基础表格",
-                key:"/table/basic"
+                key:"/admin/table/basic"
+            },
+            {
+                title:"高级表格",
+                key:"/admin/table/height"
             }
         ]
+    },
+    {
+        title:"订单管理",
+        key:"/admin/order"
     }
 ]
 export default menuList

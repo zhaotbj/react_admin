@@ -9,6 +9,10 @@ import Modals from './pages/ui/modals'
 import FormLogin from './pages/form/login'
 import FormRegister from './pages/form/register'
 import BasicTable from './pages/table/basicTable'
+import HeighTable from './pages/table/highTable'
+import Order from './pages/order/index'
+import Common from './common'
+import OrderDetail from './pages/order/detail'
 class IRouter extends Component {
     constructor(props) {
         super(props);
@@ -19,18 +23,28 @@ class IRouter extends Component {
             <HashRouter>
                 <App>
                     <Route path="/login" component={Login}></Route>
-                    <Route path="/" render={() =>
+                    {/* 最外层和登录同级 */}
+                    <Route path="/common" render={() =>
+                        <Common>
+                            <Route path="/common/order/detail/:id" component={OrderDetail} />
+                        </Common>
+                    }/>
+                    <Route path="/admin" render={() =>
                         <Admin>
                             <Switch>
-                                <Route path="/ui/button" component={Buttons}></Route>
-                                <Route path="/ui/modals" component={Modals}></Route>
-                                <Route path="/form/login" component={FormLogin}></Route>
-                                <Route path="/form/register" component={FormRegister}></Route>
-                                <Route path="/table/basic" component={BasicTable}></Route>
+                                <Route path="/admin/ui/button" component={Buttons}></Route>
+                                <Route path="/admin/ui/modals" component={Modals}></Route>
+                                <Route path="/admin/form/login" component={FormLogin}></Route>
+                                <Route path="/admin/form/register" component={FormRegister}></Route>
+                                <Route path="/admin/table/basic" component={BasicTable}></Route>
+                                <Route path="/admin/table/height" component={HeighTable}></Route>
+                                <Route path="/admin/order" component={Order}></Route>
                                 <Route component={NoMatch}></Route>
                             </Switch>
                         </Admin>
                     }></Route>
+                    
+                    
                 </App>
             </HashRouter>
         );

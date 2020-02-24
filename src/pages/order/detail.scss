@@ -1,0 +1,25 @@
+.detail_item {
+    margin-left:90px;
+    padding:25px 50px 25px 0;
+    border-bottom:1px solid #eee;
+    &:last-child{
+        border-bottom:none;
+      }
+    .item_title {
+        font-size: 18px;
+        font-weight: 700;
+        margin:20px 0;
+    }
+    .item_left{
+        color: #000;
+        margin-right: 10px;
+    }
+    li{
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+.order-map{
+    height: 450px;
+    margin: 25px -31px 0;
+  }

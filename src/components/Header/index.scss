@@ -1,4 +1,6 @@
 .header {
+    line-height: 60px;
+    .active { color: #fff;background-color: rgb(12, 127, 244);}
     .header-top {
         height: 60px;
         line-height: 60px;
@@ -6,6 +8,13 @@
         text-align: right;
         a{
             margin-left: 10px;
+        }
+        .common_log{
+            text-align: left;
+            height: 60px;
+            
+            img{height: 40px; border-radius: 50%;}
+            span{margin-left: 5px;}
         }
     }
     .breadcrumb {
